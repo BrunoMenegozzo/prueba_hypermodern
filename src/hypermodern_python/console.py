@@ -15,9 +15,6 @@ def main():
     with requests.get(API_URL) as response:
         response.raise_for_status()
         data = response.json()
-    if not data:
-        click.echo("Opss! Something is wrong. Wikipedia dosen't want to talk")
-        return
     title = data["title"]
     extract = data["extract"]
 

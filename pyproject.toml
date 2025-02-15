@@ -28,3 +28,18 @@ packages = [{ include = "hypermodern_python", from = "src" }]
 
 [tool.poetry.scripts]
 hypermodern_python = "hypermodern_python.console:main"
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+coverage = {extras = ["toml"], version = "^7.6.12"}
+pytest-cov = "^6.0.0"
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages"]
+
+[tool.coverage.run]
+branch = true
+source = ["hypermodern_python"]
+
+[tool.coverage.report]
+show_missing = true
+
