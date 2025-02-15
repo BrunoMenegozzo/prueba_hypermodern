@@ -1,0 +1,30 @@
+[project]
+name = "prueba-hypermodern"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "BrunoMenegozzo",email = "brunomenegozzo@mi.unc.edu.ar"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click (>=8.1.8,<9.0.0)",
+    "requests (>=2.32.3,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# pyproject.toml
+[tool.poetry]
+name = "prueba-hypermodern"
+version = "0.1.0"
+description = ""
+packages = [{ include = "hypermodern_python", from = "src" }]
+
+
+
+[tool.poetry.scripts]
+hypermodern_python = "hypermodern_python.console:main"
